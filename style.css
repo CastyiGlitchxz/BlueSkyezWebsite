@@ -1,0 +1,73 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: black;
+}
+
+.SidePanel {
+  background: #ffffff;
+  width: 15%;
+  height: 100%;
+  border-right-style: solid;
+  border-color: #ececec;
+  position: fixed;
+}
+
+.SideBarHolder {
+  align-items: stretch;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.SPBTN {
+  width: 90%;
+  height: 29px;
+  color: #939393;
+  background: #ffffff;
+  border-color: transparent;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.SPBTN:Hover {
+  background: #dbddff;
+  color: black;
+  border-radius: 9%;
+}
+
+.SideBarTitle {
+  font-size: 25px;
+  font-family: sans-serif;
+  padding-top: 20px;
+}
+
+.SPBottom {
+  border-top-style: solid;
+  border-color: #ececec;
+  margin-top: 185%;
+  border-right-style: solid;
+  width: 100%;
+  position: fixed;
+}
+#Creator {
+  font-size: 19px;
+  text-align: left;
+  font-family: sans-serif;
+}
+
+#MadeByTxt {
+  font-size: 10px;
+  text-align: left;
+  font-family: sans-serif;
+  color: gray;
+}
+
+.SearchBar {
+  width: 30%;
+  height: 4%;
+  border-radius: 15px;
+  font-family: sans-serif;
+  text-align: left;
+}
