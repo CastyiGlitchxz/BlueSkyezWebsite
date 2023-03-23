@@ -3,14 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width" initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <title>BlueSkyez</title>
+  <link rel="icon" type="image/x-icon" href="Icons/BlueSkyez-logos.jpeg">
+  
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-  <input class="SearchBar" placeholder="Search for an app or client"></input>
+<body onload="Travel('Dashboard'),SetLocation()" id="Body">
+  
+<iframe src="" frameborder="0" class="MainView" id="ViewportFrame">
+</iframe>
+
+
   
   <div class="TopPanel">
     <div>
@@ -21,23 +27,31 @@
 
   
   <div class="SidePanel">
-    <h1 class="SideBarTitle">BlueSkyez</h1>
-    <div class="SideBarHolder">
-      <button class="SPBTN" onclick="IsButton('Blue', 'SPBTN', 'Side Panel Button')">Dashboard</button>
-      <button class="SPBTN" onclick="IsButton()">Clients</button>
-      <button class="SPBTN">Launchers</button>
-      <button class="SPBTN">Support</button>
-      <button class="SPBTN">Settings</button>
-
-      <div class="SPBottom">
-        <p id="MadeByTxt">Made by</p>
-        <p id="Creator">Kazuma Zexs</p>
-      </div>
-  </div>
-
+      <button class="SPBTN" onclick="Travel('Dashboard'),SetLocation()">Home</button>
     
-  </div>
-  <script src="script.js"></script>
+      <button class="SPBTN" onclick="Travel('Store'),SetLocation()">Store</button>
+
+      <button class="SPBTN" onclick="window.open('Developer-Portal.html'), '_blank'">Developer Portal</button>
+
+
+      <div id="AccountDisplay">
+        <img id="ProfilePicture" src="https://personafans.com/wp-content/uploads/2022/05/arsene-guide-featured.jpg">
+        <h4 id="AcName"></h4>
+      </div>
+  
+  </div> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-bson/5.1.0/bson.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/forerunnerdb/2.0.22/fdb-all.min.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
+
+<script>
+    
+    AcName.innerText = localStorage.getItem("account-name")
+
+    document.getElementById("AcName")
+</script>
+
+  
